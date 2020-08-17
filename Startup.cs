@@ -29,6 +29,8 @@ namespace TodoApi
     {
       services.AddDbContext<TodoContext>(opt =>
          opt.UseInMemoryDatabase("TodoList")); // Register the database context
+      services.AddDbContext<PersonContext>(opt =>
+         opt.UseInMemoryDatabase("Persons"));
       services.AddControllers();
     }
 
